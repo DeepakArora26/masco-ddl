@@ -1,0 +1,19 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.3.xsd">
+
+    <preConditions>
+        <runningAs  username="liquibase"/>
+    </preConditions>
+
+    <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD">
+        <sqlFile path="changelog/MASCO-1-Create-Dummy-Table.sql"/>
+        <rollback>
+            <sqlFile path="rollback/MASCO-1-Create-Dummy-Table.sql"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
