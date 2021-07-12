@@ -45,15 +45,15 @@
 				<configuration>
 					<driver></driver>
 					<defaultSchemaName></defaultSchemaName>
-					<defaultCatalogName></defaultCatalogName>
+					<defaultCatalogName>catalog</defaultCatalogName>
 					<url></url>
 					<username></username>
 					<password></password>
-					<promptOnNonLocalDatabase></promptOnNonLocalDatabase>
-					<changeLogFile></changeLogFile>
-					<changeLogDirectory></changeLogDirectory>
-					<includeTestOutputDirectory></includeTestOutputDirectory>
-					<outputDefaultSchema></outputDefaultSchema>
+					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+					<changeLogFile>liquibase_changelog.xml</changeLogFile>
+					<changeLogDirectory>src/main/resources</changeLogDirectory>
+					<includeTestOutputDirectory>true</includeTestOutputDirectory>
+					<outputDefaultSchema>true</outputDefaultSchema>
 				</configuration>
 			</plugin>
 			<plugin>
