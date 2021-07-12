@@ -15,6 +15,14 @@
   <build>
     <plugins>
       <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>org.liquibase</groupId>
         <artifactId>liquibase-maven-plugin</artifactId>
         <executions>
@@ -27,17 +35,15 @@
           </execution>
         </executions>
         <configuration>
-          <driver />
-          <defaultSchemaName />
-          <defaultCatalogName />
-          <url />
-          <username />
-          <password />
-          <promptOnNonLocalDatabase />
-          <changeLogFile />
-          <changeLogDirectory />
-          <includeTestOutputDirectory />
-          <outputDefaultSchema />
+          <driver>com.mysql.jdbc.Driver</driver>
+          <defaultSchemaName>masco</defaultSchemaName>
+          <url>jdbc:MySql://127.0.0.1:3306/</url>
+          <username>root</username>
+          <password>root</password>
+          <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
+          <changeLogFile>ddl_changelog.xml</changeLogFile>
+          <changeLogDirectory>src/main/resources</changeLogDirectory>
+          <outputDefaultSchema>true</outputDefaultSchema>
         </configuration>
       </plugin>
       <plugin>

@@ -1,3 +1,3 @@
 START TRANSACTION;
 
-DROP TABLE ${schemaName}.dummy;
+DROP TABLE ${database.defaultSchemaName}.dummy;
