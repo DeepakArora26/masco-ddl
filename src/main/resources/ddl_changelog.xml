@@ -4,10 +4,14 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD">
-        <sqlFile path="changelog/MASCO-1-Create-Dummy-Table.sql"/>
+    <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
+        <sqlFile
+                splitStatements="true"
+                path="changelog/MASCO-1-Create-Dummy-Table.sql"/>
         <rollback>
-            <sqlFile path="rollback/MASCO-1-Create-Dummy-Table.sql"/>
+            <sqlFile
+                    splitStatements="true"
+                    path="rollback/MASCO-1-Create-Dummy-Table.sql"/>
         </rollback>
     </changeSet>
 
