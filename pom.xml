@@ -54,7 +54,7 @@
 				</executions>
 				<configuration>
 					<driver>com.mysql.jdbc.Driver</driver>
-					<defaultSchemaName>masco</defaultSchemaName>
+					<defaultSchemaName>masco1</defaultSchemaName>
 					<url>jdbc:MySql://127.0.0.1:3306/</url>
 					<username>root</username>
 					<password>root</password>
