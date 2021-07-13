@@ -7,13 +7,13 @@
     <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD">
         <sqlFile
                 splitStatements="true"
-                encoding="UTF-8"
+                encoding="utf-8"
                 path="changelog/MASCO-1-Create-Dummy-Table.sql"
                 relativeToChangelogFile="true"/>
         <rollback>
             <sqlFile
                     splitStatements="true"
-                    encoding="UTF-8"
+                    encoding="utf-8"
                     path="rollback/MASCO-1-Create-Dummy-Table.sql"
                     relativeToChangelogFile="true"/>
         </rollback>

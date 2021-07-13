@@ -1,3 +1,3 @@
 START TRANSACTION;
 
-DROP TABLE ${database.defaultSchemaName}.dummy;
+DROP TABLE ${database.defaultSchemaName}.Persons;
