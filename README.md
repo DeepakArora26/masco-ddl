@@ -23,7 +23,7 @@ A utility for executing the liquibase with help of changelogs in Mysql.
     </changeSet>
 
 
-# Add  <validCheckSum></validCheckSum> tags with the value. If you want to edit the previously ran changeset.
+# Add  '<validCheckSum></validCheckSum>' tags with the value. If you want to edit the previously ran changeset.
 
 # Add runAlwaysTrue in the changeset. If you want to run a specific changeset always.
     <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
