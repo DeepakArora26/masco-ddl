@@ -4,10 +4,11 @@ A utility for executing the liquibase with help of changelogs in Mysql.
 
 
 # Edit the below parameters in pom.xml according to your needs.
-<defaultSchemaName>masco</defaultSchemaName>
-<url>jdbc:MySql://127.0.0.1:3306/</url>
-<username>root</username>
-<password>root</password>
+
+<defaultSchemaName>
+<url>
+<username>
+<password>
 
 
 # Add the changelog's in the ddl_changelog file under resources with given format
@@ -27,4 +28,9 @@ A utility for executing the liquibase with help of changelogs in Mysql.
 
 # Add runAlwaysTrue in the changeset. If you want to run a specific changeset always.
     <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
+
+# Execute with mvn verify
+# To Execute the rollback use the below command.
+mvn liquibase:rollback -Dliquibase.rollbackCount=X
+Replace the X with number of changeset you want to rollback.
 
