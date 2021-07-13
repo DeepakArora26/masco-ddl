@@ -15,6 +15,7 @@
 	<description>Project for Database Migration</description>
 	<properties>
 		<java.version>11</java.version>
+		<defaultSchemaName>kross10</defaultSchemaName>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -54,8 +55,7 @@
 				</executions>
 				<configuration>
 					<driver>com.mysql.jdbc.Driver</driver>
-					<defaultSchemaName>kross</defaultSchemaName>
-					<url>jdbc:MySql://127.0.0.1:3306/</url>
+					<url>jdbc:MySql://127.0.0.1:3306/${defaultSchemaName}?createDatabaseIfNotExist=true</url>
 					<username>root</username>
 					<password>root</password>
 					<promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
