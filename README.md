@@ -14,7 +14,7 @@ A utility for executing the liquibase with help of changelogs in Mysql.
 1. Prepare the SQL scripts in the changelog dir.
 2. Prepare the rollback for the same SQL scripts and place it in the rollback dir.
 3. Use the below changeset format while adding new changeset's in the ddl_changelog.xml file.
-#<changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
+<changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
         <sqlFile
                 splitStatements="true"
                 path="changelog/MASCO-1-Create-Dummy-Table.sql"/>
@@ -27,7 +27,7 @@ A utility for executing the liquibase with help of changelogs in Mysql.
    
 4. Add `<validCheckSum></validCheckSum>` tag with value, If you want to edit the previously ran changeset.
 5. Add `runAlwaysTrue` in the changeset. If you want to run a specific changeset always.
-    #<changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
+    <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
 
 # Execution steps 
 1. To Run the latest changes --> mvn verify
