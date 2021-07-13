@@ -15,14 +15,18 @@ A utility for executing the liquibase with help of changelogs in Mysql.
 2. Prepare the rollback for the same SQL scripts and place it in the rollback dir.
 3. Use the below changeset format while adding new changeset's in the ddl_changelog.xml file.
 ```
-<changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD" runAlways="true">
+    <changeSet  id="MASCO-1-Create-Dummy-Table"  author="AroraD">
         <sqlFile
                 splitStatements="true"
-                path="changelog/MASCO-1-Create-Dummy-Table.sql"/>
+                encoding="UTF-8"
+                path="changelog/MASCO-1-Create-Dummy-Table.sql"
+                relativeToChangelogFile="true"/>
         <rollback>
             <sqlFile
                     splitStatements="true"
-                    path="rollback/MASCO-1-Create-Dummy-Table.sql"/>
+                    encoding="UTF-8"
+                    path="rollback/MASCO-1-Create-Dummy-Table.sql"
+                    relativeToChangelogFile="true"/>
         </rollback>
     </changeSet>
 ```   
